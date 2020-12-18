@@ -1,12 +1,15 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using NUnitNumbers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace NUnitNumbers.Test
 {
     [TestClass]
-    public class TestClass
+    //should be class followed by test
+    //see Program.cs
+    public class MathsHelper
     {
-        [Test]
+        [TestMethod]
         public void AddTest()
         {
             MathsHelper helper = new MathsHelper();
@@ -14,7 +17,7 @@ namespace NUnitNumbers.Test
             Assert.AreEqual(30, result);
         }
 
-        [TestCase]
+        [TestMethod]
         public void SubtractTest()
         {
             MathsHelper helper = new MathsHelper();
