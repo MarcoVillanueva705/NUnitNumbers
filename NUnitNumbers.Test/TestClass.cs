@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using NUnitNumbers;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace NUnitNumbers.Test
@@ -12,7 +13,10 @@ namespace NUnitNumbers.Test
         [TestMethod]
         public void AddTest()
         {
+            //Arrange
             MathsHelper helper = new MathsHelper();
+
+            //Act
             int result = helper.Add(20, 10);
             Assert.AreEqual(30, result);
         }
@@ -21,7 +25,7 @@ namespace NUnitNumbers.Test
         public void SubtractTest()
         {
             MathsHelper helper = new MathsHelper();
-            int result = helper.Subtract(20, 10);
+            var result = helper.SubtractTest(new MathsHelper());
             Assert.AreEqual(10, result);
             //add library for math tomomorrow
         }
