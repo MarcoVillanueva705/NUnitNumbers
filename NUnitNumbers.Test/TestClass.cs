@@ -1,32 +1,35 @@
-﻿using System.Collections.Generic;
-using NUnitNumbers;
+﻿using NUnit.Framework;
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+//using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace NUnitNumbers.Test
 {
-    [TestClass]
+    [TestFixture]
     //should be class followed by test
     //see Program.cs
     public class MathsHelper
     {
-        [TestMethod]
-        public void AddTest()
+        [Test]
+        public int Add(int num1, int num2)
         {
             //Arrange
             MathsHelper helper = new MathsHelper();
 
             //Act
-            int result = helper.Add(20, 10);
+            var result = helper.Add(20, 10);
+
+            //Assert
             Assert.AreEqual(30, result);
+            return result;
         }
 
-        [TestMethod]
-        public void SubtractTest()
+        [Test]
+        public int Subtract(int num1, int num2)
         {
             MathsHelper helper = new MathsHelper();
-            var result = helper.SubtractTest(new MathsHelper());
-            Assert.AreEqual(10, result);
+            var result = helper.Subtract(20, 10);
+            Assert.Equals(10, result);
+            return result;
             //add library for math tomomorrow
         }
     }
