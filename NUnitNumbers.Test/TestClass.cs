@@ -10,26 +10,26 @@ namespace NUnitNumbers.Test
     public class MathsHelper
     {
         [Test]
-        public int Add(int num1, int num2)
+        public void Add(int num1, int num2)
         {
             //Arrange
             MathsHelper helper = new MathsHelper();
 
             //Act
-            var result = helper.Add(20, 10);
+            int result = helper.Add(20, 10);
 
             //Assert
             Assert.AreEqual(30, result);
-            return result;
+           // return result;
         }
 
         [Test]
-        public int Subtract(int num1, int num2)
+        public void Subtract(int num1, int num2)
         {
             MathsHelper helper = new MathsHelper();
             var result = helper.Subtract(20, 10);
-            Assert.Equals(10, result);
-            return result;
+            Assert.AreEqual(10, result);
+            //return result;
             //add library for math tomomorrow
         }
     }
