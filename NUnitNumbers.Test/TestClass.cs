@@ -10,7 +10,7 @@ namespace NUnitNumbers.Test
     public class MathsHelper
     {
         [Test]
-        public void Add(int num1, int num2)
+        public int Add(int num1, int num2)
         {
             //Arrange
             MathsHelper helper = new MathsHelper();
@@ -20,18 +20,19 @@ namespace NUnitNumbers.Test
 
             //Assert
             Assert.AreEqual(30, result);
-           // return result;
+           return result;
         }
 
         [Test]
-        public void Subtract(int num1, int num2)
+        public int Subtract(int num1, int num2)
         {
             MathsHelper helper = new MathsHelper();
-            var result = helper.Subtract(20, 10);
+            int result = helper.Subtract(20, 10);
             Assert.AreEqual(10, result);
-            //return result;
+            return result.Parse();
             //add library for math tomomorrow
             //new unit test 12/23
         }
+
     }
 }
